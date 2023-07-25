@@ -20,12 +20,11 @@ class Program {
             switch (opcion) {
                 case 1:
                     libretaTelefonica.Add(agregarEntrada());
-                    foreach(var telefono in libretaTelefonica){
-                        Console.WriteLine(telefono.Nombre);
-                    }
+                    Console.WriteLine("¡Contacto agregado con exito!");
+                    
                     break;
                 case 2:
-                    mostrarEntradas();
+                    mostrarEntradas(List<Contacto> libretaTelefonica);
                     break;
                 case 3:
                     marcarImportante();
@@ -76,8 +75,14 @@ class Program {
        
     }
 
-    static void mostrarEntradas() {
-        
+    static void mostrarEntradas(List<Contacto> libretaTelefonica) {
+        Console.WriteLine("***** LISTA DE CONTACTOS *****");
+        Console.WriteLine("Nombre\tTeléfono\tFavoritos\n");
+
+        foreach (var contacto in libretaTelefonica)
+        {
+            Console.WriteLine(contacto.Nombre+"\n"+contacto.Numero)
+        }
     }
 
     static void marcarImportante() {
