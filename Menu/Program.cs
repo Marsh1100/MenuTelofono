@@ -24,7 +24,7 @@ class Program {
                     
                     break;
                 case 2:
-                    mostrarEntradas(List<Contacto> libretaTelefonica);
+                    mostrarEntradas(libretaTelefonica);
                     break;
                 case 3:
                     marcarImportante();
@@ -68,7 +68,7 @@ class Program {
             nombre = "Contacto";
         }
         Console.Write("Digite número del contacto: ");
-        int numero = Convert.ToInt32(Console.ReadLine());
+        long numero = Convert.ToInt64(Console.ReadLine());
 
         
         return new Contacto (nombre,numero);
@@ -80,8 +80,14 @@ class Program {
         Console.WriteLine("Nombre\tTeléfono\tFavoritos\n");
 
         foreach (var contacto in libretaTelefonica)
-        {
-            Console.WriteLine(contacto.Nombre+"\n"+contacto.Numero)
+        {   
+            if(contacto.Favorito){
+                Console.WriteLine(contacto.Nombre+"\t"+contacto.Numero+"\t⭐\n");
+
+            }else{
+                Console.WriteLine(contacto.Nombre+"\t"+contacto.Numero+"\t-\n");
+
+            }
         }
     }
 

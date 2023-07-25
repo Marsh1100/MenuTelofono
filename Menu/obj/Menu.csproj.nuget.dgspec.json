@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/arteN01-061/Documents/Margie_Bocanegra/2407CSHARP/Menu/Menu.csproj": {}
+    "/home/arteN01-061/Documents/Margie_Bocanegra/MenuTelofono/Menu/Menu.csproj": {}
   },
   "projects": {
-    "/home/arteN01-061/Documents/Margie_Bocanegra/2407CSHARP/Menu/Menu.csproj": {
+    "/home/arteN01-061/Documents/Margie_Bocanegra/MenuTelofono/Menu/Menu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/arteN01-061/Documents/Margie_Bocanegra/2407CSHARP/Menu/Menu.csproj",
+        "projectUniqueName": "/home/arteN01-061/Documents/Margie_Bocanegra/MenuTelofono/Menu/Menu.csproj",
         "projectName": "Menu",
-        "projectPath": "/home/arteN01-061/Documents/Margie_Bocanegra/2407CSHARP/Menu/Menu.csproj",
+        "projectPath": "/home/arteN01-061/Documents/Margie_Bocanegra/MenuTelofono/Menu/Menu.csproj",
         "packagesPath": "/home/arteN01-061/.nuget/packages/",
-        "outputPath": "/home/arteN01-061/Documents/Margie_Bocanegra/2407CSHARP/Menu/obj/",
+        "outputPath": "/home/arteN01-061/Documents/Margie_Bocanegra/MenuTelofono/Menu/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/arteN01-061/.nuget/NuGet/NuGet.Config"
