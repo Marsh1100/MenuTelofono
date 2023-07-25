@@ -28,9 +28,13 @@ class Program {
                     break;
                 case 3:
                     libretaTelefonica = marcarImportante(libretaTelefonica);
+                    Console.WriteLine("¡Contacto agregado a favorito con exito!");
+
                     break;
                 case 4:
-                    eliminarEntrada();
+                    libretaTelefonica=eliminarEntrada(libretaTelefonica);
+                    Console.WriteLine("Contacto eliminado.");
+
                     break;
                 case 5:
                     Console.WriteLine("Hasta luego.");
@@ -60,7 +64,7 @@ class Program {
     }
 
     static Contacto agregarEntrada() {
-        Console.WriteLine("***** AGREGAR NUEVA ENTRADA *****");
+        Console.WriteLine("\n***** AGREGAR NUEVA ENTRADA *****");
 
         Console.Write("Digite nombre del contacto: ");
         string? nombre = Convert.ToString(Console.ReadLine());
@@ -76,7 +80,7 @@ class Program {
     }
 
     static void mostrarEntradas(List<Contacto> libretaTelefonica) {
-        Console.WriteLine("***** LISTA DE CONTACTOS *****");
+        Console.WriteLine("\n***** LISTA DE CONTACTOS *****");
         Console.WriteLine("Nombre\tTeléfono\tFavoritos\n");
 
         foreach (var contacto in libretaTelefonica)
@@ -92,6 +96,8 @@ class Program {
     }
 
     static List<Contacto> marcarImportante( List<Contacto> libretaTelefonica) {
+        Console.WriteLine("\n***** MARCAR COMO FAVORITO *****");
+
         mostrarEntradas(libretaTelefonica);
         Console.Write("Digite nombre del contacto para añadir a favorito: ");
         string? nombre = Convert.ToString(Console.ReadLine());
@@ -107,9 +113,22 @@ class Program {
         return libretaTelefonica;
     }
 
-    static void eliminarEntrada()
+    static List<Contacto> eliminarEntrada(List<Contacto> libretaTelefonica)
     {
+        Console.WriteLine("\n***** ELIMINAR CONTACTO *****");
 
+        mostrarEntradas(libretaTelefonica);
+        Console.Write("Digite nombre del contacto a eliminar: ");
+        string? nombre = Convert.ToString(Console.ReadLine());
+
+        //Coincidencia del nombre
+        for(int i =0 ; i<libretaTelefonica.Count(); i++){
+            if(libretaTelefonica[i].Nombre == nombre){
+                libretaTelefonica.RemoveAt(i);
+                break;
+            }
+        }
+        return libretaTelefonica;
     }
 }
 }
