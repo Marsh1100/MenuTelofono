@@ -27,7 +27,7 @@ class Program {
                     mostrarEntradas(libretaTelefonica);
                     break;
                 case 3:
-                    marcarImportante();
+                    libretaTelefonica = marcarImportante(libretaTelefonica);
                     break;
                 case 4:
                     eliminarEntrada();
@@ -91,8 +91,20 @@ class Program {
         }
     }
 
-    static void marcarImportante() {
-        
+    static List<Contacto> marcarImportante( List<Contacto> libretaTelefonica) {
+        mostrarEntradas(libretaTelefonica);
+        Console.Write("Digite nombre del contacto para añadir a favorito: ");
+        string? nombre = Convert.ToString(Console.ReadLine());
+
+        //Coincidencia del nombre
+        foreach(var contacto in libretaTelefonica){
+
+            if(contacto.Nombre == nombre){
+                contacto.Favorito = true;
+                break;
+            }
+        }
+        return libretaTelefonica;
     }
 
     static void eliminarEntrada()
